@@ -11,6 +11,7 @@ using COMP2006_S2016_FinalExamV2.Models;
 //MODIFICATION DATE: 2016-08-18
 
 //FILE DESCRIPTIION:This is a controller created for being able to view the lists
+// Store Controller
 
 namespace COMP2007_S2016_Lesson12C.Controllers
 {
