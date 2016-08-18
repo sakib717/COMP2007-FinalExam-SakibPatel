@@ -1,0 +1,21 @@
+﻿<!--FINAL EXAM BY SAKIB PATEL
+    STUDENT #200307608
+    MODIFICATION DATE: 2016-08-18
+
+    FILE DESCRIPTIION: This page shows us the genre list to choose from. -->
+
+@using COMP2006_S2016_FinalExamV2.Models
+@model IEnumerable<Genre>
+
+
+<ul id="categories">
+    @foreach (var genre in Model)
+    {
+        <li>
+            @Html.ActionLink(genre.Name,
+                "Browse", "Store",
+                new { Genre = genre.Name }, null)
+    </li>
+    }
+</ul>
+

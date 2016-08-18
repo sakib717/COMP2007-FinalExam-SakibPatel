@@ -1,0 +1,30 @@
+﻿<!--FINAL EXAM BY SAKIB PATEL
+    STUDENT #200307608  
+    MODIFICATION DATE: 2016-08-18
+
+    FILE DESCRIPTIION: This page helps us browse for the different kinds of genres and albums -->
+@using COMP2006_S2016_FinalExamV2.Models
+@model Genre
+
+@{
+    ViewBag.Title = "Browse Albums";
+}
+
+<div class="genre">
+    <h3><em>@Model.Name</em> Albums</h3>
+
+    <ul id="album-list">
+        @foreach (var album in Model.Albums)
+        {
+            <li>
+                <a href="@Url.Action("Details",
+                    new { id = album.AlbumId })">
+                    <img alt="@album.Title"
+                         src="@album.AlbumArtUrl" />
+                    <span>@album.Title</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+

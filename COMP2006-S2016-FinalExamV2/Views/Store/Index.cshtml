@@ -1,0 +1,26 @@
+﻿<!--FINAL EXAM BY SAKIB PATEL
+    STUDENT #200307608
+    MODIFICATION DATE: 2016-08-18
+
+    FILE DESCRIPTIION: This page is for the browsing genres -->
+
+@using COMP2006_S2016_FinalExamV2.Models
+@model IEnumerable<Genre>
+
+@{
+    ViewBag.Title = "Index";
+
+}
+
+<h3>Browse Genres</h3>
+<p>
+    Select from @Model.Count()
+    genres:
+</p>
+<ul>
+    @foreach (Genre item in Model)
+    {
+        <li>@Html.ActionLink(item.Name,"Browse", new {genre=item.Name })</li>
+    }
+</ul>
+
